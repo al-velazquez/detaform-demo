@@ -1,0 +1,18 @@
+config {
+  type: "table", // Creates a view in BigQuery. Try changing to "table" instead.
+  name: "source",
+  description: "Description of the table",
+  tags:["favorite","least_liked"],
+}
+
+select 
+  "apples" as fruit, 3 as count
+  union all
+select 
+  "oranges" as fruit, 5 as count
+  union all
+select 
+  "pears" as fruit, 1 as count
+  union all  
+select 
+  "bananas" as fruit, 6 as count
